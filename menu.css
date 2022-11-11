@@ -102,10 +102,9 @@ header:focus-within .closemenubtn {
 header:focus-within .closemenubtn:focus {
   transform: translatex(-50px);
 }
-.closemenubtn:focus+nav{
-    transform-origin:top center;
-    animation:hidemenu 0.5s ease forwards;
-
+.closemenubtn:focus + nav {
+  transform-origin: top center;
+  animation: hidemenu 0.5s ease forwards;
 }
 @keyframes showmenu {
   0% {
@@ -119,21 +118,22 @@ header:focus-within .closemenubtn:focus {
   }
 }
 @keyframes hidemenu {
-    0% {
-      transform: scaley(1);
-    }
-    80% {
-      transform: scaley(1.2);
-    }
-    100% {
-      transform: scaley(0);
-    }
+  0% {
+    transform: scaley(1);
   }
+  80% {
+    transform: scaley(1.2);
+  }
+  100% {
+    transform: scaley(0);
+  }
+}
 nav ul {
   list-style-type: none;
   display: flex;
   flex-flow: column nowrap;
- 
+  position: absolute;
+  width: 100%;
 }
 nav li {
   padding: 0.5rem;
@@ -154,4 +154,13 @@ nav a:hover,
 nav a:focus {
   transform: scale(1.2);
   transition: all 0.3s;
+}
+main{
+    flex-grow:1;
+    display:grid;
+    place-content:center;
+    min-height:200vh;
+    
+
+
 }
